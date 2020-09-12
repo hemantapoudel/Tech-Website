@@ -1,4 +1,2 @@
 git commit -m "initial commit"
-git remote add origin https://github.com/hemantapoudel/Tech-Website.git
-git branch -M master
 git push -u origin master
