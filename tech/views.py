@@ -11,6 +11,8 @@ class HomeView(BaseView):
         self.frontend_view['posts']=Posts.objects.all()
         return render(request,'index.html',self.frontend_view)
 
-class SingleView(View):
-    def get(self,request):
+class SingleView(BaseView):
+    def get(self,request,slug):
+        
+        self.frontend_view['view_post']=Posts.objects.filter(slug=slug)
         return render(request,'single.html')

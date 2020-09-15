@@ -4,5 +4,5 @@ from .views import *
 app_name="tech"
 urlpatterns = [
     path('', HomeView.as_view(),name="home"),
-    path('/<slug>', SingleView.as_view(),name="single"),
+    path('<slug>', SingleView.as_view(), name="single"),
 ]

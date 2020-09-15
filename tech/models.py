@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 class Category(models.Model):
     title=models.CharField(max_length=200)
@@ -18,6 +18,7 @@ class Subcategory(models.Model):
 
 class Posts(models.Model):
     title=models.CharField(max_length=500)
+    slug=models.SlugField()
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
     subcategory=models.ForeignKey(Subcategory,on_delete=models.CASCADE)
     feature_image=models.ImageField(upload_to='Images')
@@ -29,4 +30,6 @@ class Posts(models.Model):
 
     def __str__(self):
         return self.title
-
+    
+    def GetPostUrls(self):
+        return reverse("tech:single",kwargs={'slug':self.slug})
