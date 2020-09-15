@@ -15,4 +15,4 @@ class SingleView(BaseView):
     def get(self,request,slug):
         
         self.frontend_view['view_post']=Posts.objects.filter(slug=slug)
-        return render(request,'single.html')
+        return render(request,'single.html',self.frontend_view)
