@@ -191,84 +191,34 @@
 								<div class="section_bar"></div>
 							</div>
 							<div class="technology_content">
+								{% for posts in posts%}
+								<!-- Post -->
+								<div class="post_item post_h_large">
+									<div class="row">
+										<div class="col-lg-5">
+											<div class="post_image"><img src="{{posts.feature_image.url}}" alt="https://unsplash.com/@jmckinven"></div>
+										</div>
+										<div class="col-lg-7">
+											<div class="post_content">
+												<div class="post_category cat_technology"><a href="category.html">{{posts.category}}</a></div>
+												<div class="post_title"><a href="single.html">{{posts.title}}</a></div>
+												<div class="post_info d-flex flex-row align-items-center justify-content-start">
+													<div class="post_author d-flex flex-row align-items-center justify-content-start">
+														<div><div class="post_author_image"><img src="{% static 'images/author_1.jpg' %}" alt=""></div></div>
+														<div class="post_author_name"><a href="#">Michael Smith</a></div>
+													</div>
+													<div class="post_date"><a href="#">29 April 2018</a></div>
+													<div class="post_comments ml-auto"><a href="#">3 comments</a></div>
+												</div>
+												<div class="post_text">
+													<p>{{posts.first_paragraph}}</p>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+								{%endfor%}
 								
-								<!-- Post -->
-								<div class="post_item post_h_large">
-									<div class="row">
-										<div class="col-lg-5">
-											<div class="post_image"><img src="{% static 'images/post_h_1.jpg' %}" alt="https://unsplash.com/@jmckinven"></div>
-										</div>
-										<div class="col-lg-7">
-											<div class="post_content">
-												<div class="post_category cat_technology"><a href="category.html">technology</a></div>
-												<div class="post_title"><a href="single.html">The new Apple release ceremony</a></div>
-												<div class="post_info d-flex flex-row align-items-center justify-content-start">
-													<div class="post_author d-flex flex-row align-items-center justify-content-start">
-														<div><div class="post_author_image"><img src="{% static 'images/author_1.jpg' %}" alt=""></div></div>
-														<div class="post_author_name"><a href="#">Michael Smith</a></div>
-													</div>
-													<div class="post_date"><a href="#">29 April 2018</a></div>
-													<div class="post_comments ml-auto"><a href="#">3 comments</a></div>
-												</div>
-												<div class="post_text">
-													<p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div>
-
-								<!-- Post -->
-								<div class="post_item post_h_large">
-									<div class="row">
-										<div class="col-lg-5">
-											<div class="post_image"><img src="{% static 'images/post_h_2.jpg' %}" alt="https://unsplash.com/@neonbrand"></div>
-										</div>
-										<div class="col-lg-7">
-											<div class="post_content">
-												<div class="post_category cat_world"><a href="category.html">world</a></div>
-												<div class="post_title"><a href="single.html">The new Apple release ceremony</a></div>
-												<div class="post_info d-flex flex-row align-items-center justify-content-start">
-													<div class="post_author d-flex flex-row align-items-center justify-content-start">
-														<div><div class="post_author_image"><img src="{% static 'images/author_1.jpg' %}" alt=""></div></div>
-														<div class="post_author_name"><a href="#">Michael Smith</a></div>
-													</div>
-													<div class="post_date"><a href="#">29 April 2018</a></div>
-													<div class="post_comments ml-auto"><a href="#">3 comments</a></div>
-												</div>
-												<div class="post_text">
-													<p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div>
-
-								<!-- Post -->
-								<div class="post_item post_h_large">
-									<div class="row">
-										<div class="col-lg-5">
-											<div class="post_image"><img src="{% static 'images/post_h_3.jpg' %}" alt="https://unsplash.com/@cdr6934"></div>
-										</div>
-										<div class="col-lg-7">
-											<div class="post_content">
-												<div class="post_category cat_world"><a href="category.html">world</a></div>
-												<div class="post_title"><a href="single.html">New HTML5 Codes - Freebies</a></div>
-												<div class="post_info d-flex flex-row align-items-center justify-content-start">
-													<div class="post_author d-flex flex-row align-items-center justify-content-start">
-														<div><div class="post_author_image"><img src="{% static 'images/author_1.jpg'%}" alt=""></div></div>
-														<div class="post_author_name"><a href="#">Michael Smith</a></div>
-													</div>
-													<div class="post_date"><a href="#">29 April 2018</a></div>
-													<div class="post_comments ml-auto"><a href="#">3 comments</a></div>
-												</div>
-												<div class="post_text">
-													<p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div>
 
 							</div>
 						</div>
