@@ -19,6 +19,8 @@ class Subcategory(models.Model):
 class Posts(models.Model):
     title=models.CharField(max_length=500)
     slug=models.SlugField()
+    meta_description=models.CharField(max_length=160)
+    seo_title=models.CharField(max_length=200)
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
     subcategory=models.ForeignKey(Subcategory,on_delete=models.CASCADE)
     feature_image=models.ImageField(upload_to='Images')
