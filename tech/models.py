@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-
+Label=(('Hot','Hot'),('New','New'),('Sale','Sale'))
 class Category(models.Model):
     title=models.CharField(max_length=200)
     slug=models.SlugField()
@@ -25,6 +25,7 @@ class Posts(models.Model):
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
     subcategory=models.ForeignKey(Subcategory,on_delete=models.CASCADE)
     feature_image=models.ImageField(upload_to='Images')
+    feature_post = models.BooleanField(default=False)
     image1=models.ImageField(upload_to='Images',blank=True)
     first_paragraph=models.TextField()
     h1=models.CharField(max_length=500)

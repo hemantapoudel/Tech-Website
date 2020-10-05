@@ -120,11 +120,12 @@
 
 						<div class="featured">
 							<div class="row">
+							{% for post in main_post%}
 								<div class="col-lg-8">
 
 									<!-- Post -->
 									<div class="post_item post_v_large d-flex flex-column align-items-start justify-content-start">
-										<div class="post_image"><img src="{% static 'images/post_1.jpg' %}" alt="https://unsplash.com/@cgower"></div>
+										<div class="post_image"><img src="{{post.feature_image.url}}" alt=""></div>
 										<div class="post_content">
 											<div class="post_category cat_technology"><a href="category.html">technology</a></div>
 											<div class="post_title"><a href="single.html">The new Apple release ceremony</a></div>
@@ -142,6 +143,7 @@
 										</div>
 									</div>
 								</div>
+							{%endfor%}
 								<div class="col-lg-4">
 									
 									<!-- Post -->
@@ -201,7 +203,7 @@
 										<div class="col-lg-7">
 											<div class="post_content">
 												<div class="post_category cat_technology"><a href="category.html">{{posts.category}}</a></div>
-												<div class="post_title"><a href="single.html">{{posts.title}}</a></div>
+												<div class="post_title"><a href="{{posts.GetPostUrls}}">{{posts.title}}</a></div>
 												<div class="post_info d-flex flex-row align-items-center justify-content-start">
 													<div class="post_author d-flex flex-row align-items-center justify-content-start">
 														<div><div class="post_author_image"><img src="{% static 'images/author_1.jpg' %}" alt=""></div></div>

@@ -9,6 +9,7 @@ class BaseView(View):
 class HomeView(BaseView):
     def get(self,request):
         self.frontend_view['posts']=Posts.objects.all()
+        self.featured_view['main_post']=Posts.objects.filter(feature_post=True)
         return render(request,'index.html',self.frontend_view)
 
 class SingleView(BaseView):
